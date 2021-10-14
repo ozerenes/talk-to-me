@@ -41,11 +41,11 @@ body {
 
 .wrapper {
     width: 100%;
-    height: 30vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     z-index: 10;
     position: relative;
 }
@@ -62,7 +62,7 @@ body {
 .balloon{
     display: inline-block;
     position: absolute;
-    bottom: 2rem;
+    bottom: 3rem;
     text-align: center;
     color: #d97043;
     font-style: italic;
@@ -194,10 +194,10 @@ body {
     display: inline-block;
 }
 
-.button{
+a.button{
     background: #f1f1f1;
     color: #383838;
-    padding: 15px 60px;
+    padding: 10px 15px 13px 15px;
     border-radius: 10px;
     display: inline-block;
     font-size: 20px;
@@ -205,6 +205,26 @@ body {
     cursor: pointer;
     box-shadow: 1px 1px 5px #f1f1f1;
     position: relative;
+    width: 167px;
+    height: 60px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button{
+    background: #f1f1f1;
+    color: #383838;
+    padding: 10px 15px;
+    border-radius: 10px;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px #f1f1f1;
+    position: relative;
+    width: 167px;
+    height: 60px;
+    text-align: center;
 }
 
 .button:hover{
@@ -270,6 +290,21 @@ body {
     height: 100%;
     display: inline-block;
 }
+
+
+.container{
+    width: 100vw;
+    min-width: 100vw;
+    max-width: 100vw;
+}
+
+textarea.form-control{
+    width: 100%;
+    height: 80px;
+    min-height: 80px;
+}
+
+
 
 @keyframes flip {
     0% {

@@ -258,7 +258,7 @@
     let degrees = getMouseDegrees(mouse.x, mouse.y, degreeLimit);
     joint.rotation.y = THREE.Math.degToRad(degrees.x);
     joint.rotation.x = THREE.Math.degToRad(degrees.y);
-    console.log(joint.rotation.x);
+    // console.log(joint.rotation.x);
   }
 
   function getMouseDegrees(x, y, degreeLimit) {
