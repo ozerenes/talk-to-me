@@ -304,6 +304,18 @@ textarea.form-control{
     min-height: 80px;
 }
 
+.chat-container{
+    width: 400px;
+    display: inline-block;
+    height: 450px;
+    position: relative;
+}
+
+#mic{
+    position: absolute;
+    left: 0;
+}
+
 
 
 @keyframes flip {
