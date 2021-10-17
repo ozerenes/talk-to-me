@@ -138,7 +138,7 @@
     
     let floorGeometry = new THREE.PlaneGeometry(5000, 5000, 1, 1);
     let floorMaterial = new THREE.MeshPhongMaterial({
-      color: 0xeeeeee,
+      color: 0xeeeeee, // ground color
       shininess: 0 });
 
 
@@ -149,7 +149,7 @@
     scene.add(floor);
 
     let geometry = new THREE.SphereGeometry(8, 32, 32);
-    let material = new THREE.MeshBasicMaterial({ color: 0xa8b0b2 }); 
+    let material = new THREE.MeshBasicMaterial({ color: 0xFFD700}); // center round color
     let sphere = new THREE.Mesh(geometry, material);
 
     sphere.position.z = -15;

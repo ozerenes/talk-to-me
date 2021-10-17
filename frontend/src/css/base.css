@@ -16,6 +16,11 @@ html {
 
 a{
     text-decoration: none;
+    outline: none;
+}
+
+a:hover{
+    color: #FFD700 !important;
 }
 
 body {
@@ -86,7 +91,7 @@ body {
     height: 100%;
     top: 0;
     left: 0;
-    background: #f1f1f1;
+    background: #000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,7 +113,7 @@ body {
     top: 25px;
     width: 50px;
     height: 50px;
-    background-color: #9bffaf;
+    background-color: #FFD700;
     animation: flip 1s infinite;
 }
 
@@ -227,10 +232,10 @@ a.button{
     text-align: center;
 }
 
-.button:hover{
-    background: #8a6f6c;
-    color: #f1f1f1;
-    box-shadow: 1px 1px 5px #8b706d;
+a.button:hover{
+    background: #FFD700;
+    color: #000 !important;
+    box-shadow: 1px 1px 5px #FFD700;
 }
 
 .button:before{
@@ -247,7 +252,7 @@ a.button{
 }
 
 .button:hover:before{
-    border: 4px solid #8b706d;
+    border: 4px solid #FFD700;
     border-top: none;
 }
 
@@ -265,7 +270,7 @@ a.button{
 }
 
 .button:hover:after{
-    border: 4px solid #8b706d;
+    border: 4px solid #FFD700;
     border-top: none;
 }
 
@@ -314,6 +319,7 @@ textarea.form-control{
 #mic{
     position: absolute;
     left: 0;
+    border-radius: 20px;
 }
 
 

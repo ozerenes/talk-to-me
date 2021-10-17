@@ -1,8 +1,14 @@
+let speech = new SpeechSynthesisUtterance();
+speech.lang = "en";
+speech.rate = 1.1;
+speech.pitch = 1.1;
+
 let mic = document.getElementById("mic");
 let chatareamain = document.querySelector('.chatarea-main');
 let chatareaouter = document.querySelector('.chatarea-outer');
 
-let intro = ["Hello, I am Chitti", "Hi, I am a Robo", "Hello, My name is Chitti"];
+let intro = ["Hello, I am Summer", "Hi, I am a Summer", "Hello, My name is Summer"];
+let why = ["Because I am sad", "Because I need be alone", "Because, You did me sad"];
 let help = ["How may i assist you?","How can i help you?","What i can do for you?"];
 let greetings = ["i am good you little piece of love", "i am fine, what about you", "don't want to talk", "i am good"];
 let hobbies = ["i love to talk with humans", "i like to make friends like you", "i like cooking"];
@@ -30,10 +36,14 @@ function showchatbotmsg(chatbotmsg){
 }
 
 function chatbotvoice(message){
-    const speech = new SpeechSynthesisUtterance();
-    speech.text = "I dont want to talk";
+
+    speech.text = "i dont want to talk";
     if(message.includes('Who are you')){
         let finalresult = intro[Math.floor(Math.random() * intro.length)];
+        speech.text = finalresult;
+    }
+    if(message.includes('Why' || 'Why did you say this' || 'vay')){
+        let finalresult = why[Math.floor(Math.random() * why.length)];
         speech.text = finalresult;
     }
     if(message.includes('fine')){
@@ -77,7 +87,7 @@ recognition.onresult=function(e){
     let transcript = e.results[resultIndex][0].transcript;
     chatareamain.appendChild(showusermsg(transcript));
     chatbotvoice(transcript);
-    console.log(transcript);
+    // console.log(transcript);
 }
 recognition.onend=function(){
     mic.style.background="#ff3b3b";
